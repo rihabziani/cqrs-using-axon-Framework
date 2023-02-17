@@ -39,3 +39,4 @@ Cette classe contient deux types de fonctions : *fonctions de décision* et *fon
 #### 1.2. Le Package Controller :
 il contient une seule classe appelé AccountCommandController :
 ![image](https://user-images.githubusercontent.com/85801662/219758311-24da26af-e034-4469-9f0e-bf82c79c1b48.png)
+On utilise l'annotation @RestController qui combine les fonctionnalités de deux autres annotations Spring : @Controller et @ResponseBody. Elle indique que la classe annotée est un contrôleur de REST qui retourne directement des données sous forme d'un objet serialisé, plutôt que de renvoyer une vue HTML.Les annotations telles que @GetMapping, @PostMapping, @PutMapping et @DeleteMapping peuvent être utilisées pour marquer les méthodes correspondantes de la classe avec les verbes HTTP appropriés.
