@@ -31,3 +31,4 @@ Essayons maintenant de détailler chaque package :
 
 Puis on déclare les différents attributs qui vous semblent légitimes, et il est indispensable lorsque vous utiliez AXON de déclarer dans l'aggrégat un constructeur sans paramètre .
 
+Cette classe contient deux types de fonctions : *fonctions de décision* et *fonctions d'évolution* , dans une fonction de décision on utilise l'annotation @CommandHandler  pour gérer la commande et produire les événements correspondants, Le gestionnaire de commande est responsable de la validation de la commande et de la prise de décisions sur les actions à effectuer en réponse, Il est également responsable de la production d'événements qui représentent l'état modifié de l'agrégat après avoir traité la commande, Ce type de fonction reçoit comme paramètre une commande.  
