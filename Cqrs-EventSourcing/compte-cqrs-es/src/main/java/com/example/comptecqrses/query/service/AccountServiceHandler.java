@@ -89,7 +89,7 @@ public class AccountServiceHandler {
     }
 
     @QueryHandler
-    public List<Account> on(GetAllAccountsQuery query){
+    public Account on(GetAllAccountsQuery query){
         return accountRepository.findAll();
     }
 }
