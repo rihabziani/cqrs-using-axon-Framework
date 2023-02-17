@@ -27,7 +27,7 @@ public class AccountQueryCobtroller {
     }
     @GetMapping("/{id}")
     public Account getAccount(@PathVariable String id){
-        Account response = queryGateway.query(new GetAccountByIdQuery(), ResponseTypes.instanceOf(Account.class)).join();
+        Account response = queryGateway.query(new GetAccountByIdQuery(id), ResponseTypes.instanceOf(Account.class)).join();
         return response;
     }
 }

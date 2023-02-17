@@ -5,6 +5,7 @@ import com.example.comptecqrses.commonApi.events.AccountActivatedEvent;
 import com.example.comptecqrses.commonApi.events.AccountCreatedEvent;
 import com.example.comptecqrses.commonApi.events.AccountCreditedEvent;
 import com.example.comptecqrses.commonApi.events.AccountDebitedEvent;
+import com.example.comptecqrses.commonApi.queries.GetAccountByIdQuery;
 import com.example.comptecqrses.commonApi.queries.GetAllAccountsQuery;
 import com.example.comptecqrses.query.entities.Account;
 import com.example.comptecqrses.query.entities.Operation;
@@ -89,7 +90,7 @@ public class AccountServiceHandler {
     }
 
     @QueryHandler
-    public Account on(GetAllAccountsQuery query){
-        return accountRepository.findAll();
+    public Account on(GetAccountByIdQuery query){
+        return accountRepository.findById(query.getId()).get();
     }
 }
