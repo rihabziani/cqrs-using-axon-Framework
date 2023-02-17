@@ -29,4 +29,5 @@ Essayons maintenant de détailler chaque package :
 
 **Le Package aggregates** contient la classe *AccountAggregate* dans cette classe on utilise l'annotation @Aggregate. Lorsque cette annotation est appliquée à une classe, elle informe le framework Axon que cette classe est un agrégat de racine et qu'elle doit être gérée en conséquence. Le framework Axon utilise l'annotation @Aggregate pour générer automatiquement le code nécessaire à la gestion de l'agrégat, y compris la gestion des événements, la validation des modifications et la gestion de la transaction. Cela permet aux développeurs de se concentrer sur la logique métier de leur application, plutôt que sur les détails de mise en œuvre de la gestion des agrégats.
 
-Puis on déclare 
+Puis on déclare les différents attributs qui vous semblent légitimes, et il est indispensable lorsque vous utiliez AXON de déclarer dans l'aggrégat un constructeur sans paramètre .
+
