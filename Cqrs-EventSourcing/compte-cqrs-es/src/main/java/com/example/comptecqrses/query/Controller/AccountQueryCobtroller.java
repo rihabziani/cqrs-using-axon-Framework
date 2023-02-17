@@ -1,5 +1,6 @@
 package com.example.comptecqrses.query.Controller;
 
+import com.example.comptecqrses.commonApi.queries.GetAccountByIdQuery;
 import com.example.comptecqrses.commonApi.queries.GetAllAccountsQuery;
 import com.example.comptecqrses.query.entities.Account;
 import lombok.AllArgsConstructor;
@@ -26,7 +27,7 @@ public class AccountQueryCobtroller {
     }
     @GetMapping("/{id}")
     public Account getAccount(@PathVariable String id){
-        Account response = queryGateway.query(new GetAllAccountsQuery(), ResponseTypes.instanceOf(Account.class)).join();
+        Account response = queryGateway.query(new GetAccountByIdQuery(), ResponseTypes.instanceOf(Account.class)).join();
         return response;
     }
 }
